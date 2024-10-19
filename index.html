@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URMAR</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <div class="loading-screen" id="loading-screen">
+        <div class="logo">
+            <img src="img/Logo-Urmar.png" alt="Logo" id="logo"> <!-- Reemplaza con la ruta de tu logo -->
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="loading-text" id="loading-text">Cargando... 0%</div>
+    </div>
+    
+    <div class="main-content" id="main-content" style="display:none;">
+        <!-- Aquí va todo tu contenido actual -->
+    </div>
+    
+    <!-- Menú de Navegación -->
+    <header>
+        <nav class="menu">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="img/Logo-Urmar.png" alt="Logo">
+            </div>
+            <!-- Botones de navegación -->
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carrusel de Imágenes -->
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="slide fade">
+                <img src="img/C1.png" alt="Imagen 1">
+            </div>
+            <div class="slide fade">
+                <img src="img/C2.png" alt="Imagen 2">
+            </div>
+            <div class="slide fade">
+                <img src="img/C3.png" alt="Imagen 3">
+            </div>
+            <div class="slide fade">
+                <img src="img/C4.png" alt="Imagen 4">
+            </div>
+            <!-- Texto en el centro del carrusel -->
+            <div class="title">
+                <h1>URMAR</h1>
+                <p>+ por -, Tu lugar ideal</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="categorias">
+        <div class="categories-section">
+            <div class="category">
+              <img src="img/ABARROTERIA.jpeg" alt="Abarrotería" class="category-icon">
+              <h3 class="category-title">Abarrotería</h3>
+              <p class="category-description">Todos los granos en un mismo lugar.</p>
+            </div>
+          
+            <div class="category">
+              <img src="img/BEBIDAS Y REFRESCOS.jpeg" alt="Bebidas y Jugos" class="category-icon">
+              <h3 class="category-title">Bebidas y Jugos</h3>
+              <p class="category-description">A la temperatura adecuada para que te refresques.</p>
+            </div>
+          
+            <div class="category">
+              <img src="img/CARNES.jpeg" alt="Carnes" class="category-icon">
+              <h3 class="category-title">Carnes</h3>
+              <p class="category-description">Los mejores cortes y frescura.</p>
+            </div>
+          
+            <div class="category">
+              <img src="img/FRUTAS.jpeg" alt="Frutas y Verduras" class="category-icon">
+              <h3 class="category-title">Frutas y Verduras</h3>
+              <p class="category-description">Frescas y jugosas.</p>
+            </div>
+          </div>
+          
+    </section>
+
+    <section id="Productos">
+        <div class="products-section">
+            <div class="products-grid">
+              <!-- Las primeras 6 imágenes -->
+              <div class="product-item">
+                <img src="img/1.jpeg" alt="Producto 1" class="product-image" onclick="openPreview('img/1.jpeg')">
+              </div>
+              <div class="product-item">
+                <img src="img/2.jpeg" alt="Producto 2" class="product-image" onclick="openPreview('img/2.jpeg')">
+              </div>
+              <div class="product-item">
+                <img src="img/3.jpeg" alt="Producto 3" class="product-image" onclick="openPreview('img/3.jpeg')">
+              </div>
+              <div class="product-item">
+                <img src="img/4.jpeg" alt="Producto 4" class="product-image" onclick="openPreview('img/4.jpeg')">
+              </div>
+              <div class="product-item">
+                <img src="img/5.jpeg" alt="Producto 5" class="product-image" onclick="openPreview('img/5.jpeg')">
+              </div>
+              <div class="product-item">
+                <img src="img/6.jpeg" alt="Producto 6" class="product-image" onclick="openPreview('img/6.jpeg')">
+              </div>
+          
+              <!-- Más productos ocultos inicialmente -->
+              <div class="product-item hidden">
+                <img src="img/7.jpeg" alt="Producto 7" class="product-image" onclick="openPreview('img/7.jpeg')">
+              </div>
+              <div class="product-item hidden">
+                <img src="img/8.jpeg" alt="Producto 8" class="product-image" onclick="openPreview('img/8.jpeg')">
+              </div>
+              <div class="product-item hidden">
+                <img src="img/9.jpeg" alt="Producto 9" class="product-image" onclick="openPreview('img/9.jpeg')">
+              </div>
+              <div class="product-item hidden">
+                <img src="img/10.jpeg" alt="Producto 7" class="product-image" onclick="openPreview('img/10.jpeg')">
+              </div>
+              <div class="product-item hidden">
+                <img src="img/11.jpeg" alt="Producto 8" class="product-image" onclick="openPreview('img/11.jpeg')">
+              </div>
+              <div class="product-item hidden">
+                <img src="img/12.jpeg" alt="Producto 9" class="product-image" onclick="openPreview('img/12.jpeg')">
+              </div>
+              <div class="product-item hidden">
+                <img src="img/13.jpeg" alt="Producto 7" class="product-image" onclick="openPreview('img/13.jpeg')">
+              </div>
+              <div class="product-item hidden">
+                <img src="img/14.jpeg" alt="Producto 8" class="product-image" onclick="openPreview('img/14.jpeg')">
+              </div>
+              
+            </div>
+          
+            <!-- Botón para mostrar más productos -->
+            <button class="show-more-btn" onclick="toggleProducts()">Ver más</button>
+          </div>
+          
+          <!-- Vista previa de imagen emergente -->
+          <div id="image-preview" class="image-preview-modal">
+            <span class="close" onclick="closePreview()">&times;</span>
+            <img class="modal-content" id="preview-img">
+          </div>
+          
+    </section>
+
+    <section id="Contacto">
+        <footer class="contact-section">
+            <div class="social-icons">
+              <a href="https://facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          
+            <div class="contact-info">
+              <p>Dirección: Barrio la Ceibita, San Luis, Comayagua.</p>
+              <p>Cel: 9510-0494</p>
+              <p>Horario: 7:00 AM - 7:00 PM</p>
+            </div>
+          
+            <div class="footer-text">
+              <p>Derechos reservados 2024, diseñado por <a href="tu_portafolio_link" target="_blank" class="portfolio-link">Elena Lavaire</a>.</p>
+            </div>
+          </footer>
+          
+    </section>
+
+
+
+    
+    <script src="js/carousel.js"></script>
+    <script>
+        // Mostrar más / menos productos
+function toggleProducts() {
+  const hiddenItems = document.querySelectorAll('.product-item.hidden');
+  const button = document.querySelector('.show-more-btn');
+
+  hiddenItems.forEach(item => {
+    if (item.style.display === "none" || item.style.display === "") {
+      item.style.display = "block";
+      button.textContent = "Mostrar menos";
+    } else {
+      item.style.display = "none";
+      button.textContent = "Ver más";
+    }
+  });
+}
+
+// Abrir la vista previa de la imagen
+function openPreview(imageSrc) {
+  const modal = document.getElementById('image-preview');
+  const modalImg = document.getElementById('preview-img');
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+}
+
+// Cerrar la vista previa de la imagen
+function closePreview() {
+  const modal = document.getElementById('image-preview');
+  modal.style.display = "none";
+}
+
+    </script>
+    <script>
+        // Código de carga
+window.onload = function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const mainContent = document.getElementById('main-content');
+    const progress = document.getElementById('progress');
+    const loadingText = document.getElementById('loading-text');
+
+    let progressValue = 0; // Valor inicial de la carga
+
+    // Intervalo para simular la carga
+    const interval = setInterval(() => {
+        progressValue += 1; // Incrementa el valor de la carga
+        progress.style.width = progressValue + '%'; // Actualiza el ancho de la barra
+        loadingText.innerText = `Cargando... ${progressValue}%`; // Actualiza el texto
+
+        // Cuando llega al 100%, oculta la pantalla de carga
+        if (progressValue >= 100) {
+            clearInterval(interval); // Detiene el intervalo
+            loadingScreen.style.display = 'none'; // Oculta la pantalla de carga
+            mainContent.style.display = 'block'; // Muestra el contenido principal
+        }
+    }, 50); // Ajusta este valor para cambiar la velocidad de carga
+};
+
+    </script>
+</body>
+
+</html>

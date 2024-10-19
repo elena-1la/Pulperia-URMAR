@@ -1,0 +1,368 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Menú de navegación */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50; /* Color verde */
+    padding: 15px;
+}
+
+/* Logo */
+.logo img {
+    height: 50px; /* Ajusta el tamaño según sea necesario */
+}
+
+/* Navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* Cambia el color al pasar el mouse (ej: dorado) */
+}
+/* Carrusel de Imágenes */
+.carousel {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-width: 1400px;
+}
+
+/* Texto en el centro del carrusel */
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.carousel-text h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.carousel-text p {
+    font-size: 24px;
+}
+
+/* Animación de transición */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.title {
+   
+        font-size: 48px; /* Tamaño más grande */
+        color: rgb(123, 118, 118); /* Color del texto */
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra suave */
+        font-weight: bold; /* Texto más grueso */
+        
+        /* Centrar el título */
+        position: absolute;
+        top: 50%; /* Centra el texto verticalmente */
+        left: 50%; /* Centra el texto horizontalmente */
+        transform: translate(-50%, -50%); /* Ajusta para que el punto central sea el propio texto */
+        
+        text-align: center; /* Asegura que el texto esté alineado al centro */
+        z-index: 10; /* Mantiene el texto por encima de la imagen */
+     
+      
+  }
+  .categories-section {
+    display: flex;
+    justify-content: space-around; /* Distribuye las categorías de forma equitativa */
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten si la pantalla es más pequeña */
+  }
+  
+  .category {
+    text-align: center; /* Centra el texto e imagen de cada categoría */
+    width: 200px; /* Controla el tamaño del contenedor */
+    margin: 20px;
+  }
+  
+  .category-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente dentro del círculo */
+    border: 3px solid #ccc; /* Opcional: añade un borde alrededor de la imagen */
+  }
+  
+  .category-title {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .category-description {
+    font-size: 14px;
+    color: #555; /* Un tono de gris suave para la descripción */
+    margin-top: 5px;
+  }
+/* Estructura del grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px;
+  }
+  
+  .product-item {
+    position: relative;
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+
+  }
+  
+  .product-image {
+    width: 100%;
+    transition: transform 0.3s ease; /* Efecto de transición */
+    cursor: pointer;
+  }
+  
+  /* Efecto de hover: zoom en la imagen */
+  .product-image:hover {
+    transform: scale(1.1); /* Hace un pequeño zoom */
+  }
+  
+  /* Ocultar las imágenes adicionales inicialmente */
+  .hidden {
+    display: none;
+  }
+  
+  /* Estilos del botón Ver más / Mostrar menos */
+  .show-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+  }
+  
+  .show-more-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Modal de vista previa de imagen */
+  .image-preview-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    padding: 20px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+/* Estructura del grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px;
+  }
+  
+  .product-item {
+    position: relative;
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+  }
+  
+  .product-image {
+    width: 100%;
+    transition: transform 0.3s ease; /* Efecto de transición */
+    cursor: pointer;
+  }
+  
+  /* Efecto de hover: zoom en la imagen */
+  .product-image:hover {
+    transform: scale(1.1); /* Hace un pequeño zoom */
+  }
+  
+  /* Ocultar las imágenes adicionales inicialmente */
+  .hidden {
+    display: none;
+  }
+  
+  /* Estilos del botón Ver más / Mostrar menos */
+  .show-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+  }
+  
+  .show-more-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Modal de vista previa de imagen */
+  .image-preview-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    padding: 20px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .products-section {
+    text-align: center; /* Alinea el botón al centro del contenedor */
+  }
+  .contact-section {
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espaciado */
+  }
+  
+  .social-icons {
+    margin-bottom: 15px; /* Espacio entre los íconos y la información de contacto */
+  }
+  
+  .social-icon {
+    color: white; /* Color blanco para los íconos */
+    font-size: 24px; /* Tamaño de los íconos */
+    margin: 0 10px; /* Espacio horizontal entre íconos */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+  }
+  
+  .social-icon:hover {
+    color: #ccc; /* Color al pasar el cursor (puedes cambiarlo si deseas otro color) */
+  }
+  
+  .contact-info p {
+    margin: 5px 0; /* Espaciado entre las líneas de la información de contacto */
+  }
+  
+  .portfolio-link {
+    color: white; /* Color blanco para el enlace */
+    text-decoration: none; /* Sin subrayado */
+  }
+  
+  .portfolio-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+  }
+  /* Estilos para la pantalla de carga */
+.loading-screen {
+    position: fixed; /* Hace que ocupe toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Fondo negro para la pantalla de carga */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    z-index: 9999; /* Asegura que esté sobre el contenido */
+}
+
+.logo {
+    animation: move 1.5s infinite alternate; /* Efecto de movimiento en el logo */
+}
+
+@keyframes move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.progress-bar {
+    width: 80%; /* Ancho de la barra de carga */
+    background-color: #555; /* Color de fondo de la barra */
+    border-radius: 5px; /* Esquinas redondeadas */
+    margin: 20px auto; /* Centra la barra */
+    position: relative;
+    height: 20px; /* Altura de la barra */
+}
+
+.progress {
+    height: 100%; /* Altura completa de la barra */
+    width: 0; /* Comienza en 0% */
+    background-color: #28a745; /* Color verde de la barra */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.loading-text {
+    margin-top: 10px;
+}
